@@ -1,4 +1,4 @@
-package Day4;
+package HOMEWORK.Day4;
 
 public class TestPerson {
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package Day4;
+package HOMEWORK.Day4;
+
+import HOMEWORK.Day4.Author;
 
 public class Book {
     String name;
