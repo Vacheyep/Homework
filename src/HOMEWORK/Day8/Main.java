@@ -10,7 +10,7 @@ public class Main {
 
         // Random random = new Random();
         // int x = random.nextInt();
-        count_of_numbers();
+        check_cords();
 
 
     }
@@ -244,7 +244,6 @@ public class Main {
             }
             while (a > b && b % 2 == 0);
             System.out.println(b);
-
         }
 
     }
@@ -265,8 +264,11 @@ public class Main {
             System.out.println("in same quarter");
         } else if (ax > 0 && ay < 0 && bx > 0 && by < 0) {
             System.out.println("in same quarter");
+        } else if (ax == 0 || ay == 0 || bx == 0 || by == 0) {
+            System.out.println("any x and(or) y cords = 0");
         } else {
-            System.out.println("not in same quarter or any x and y cords = 0");
+            System.out.println("not in same quarter");
+
         }
     }
 
