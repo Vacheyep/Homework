@@ -12,16 +12,16 @@ public class main {
     }
     //ex1
         static void add1(int a, int b){
-            System.out.println(a);
+
         }
         static void add1(int a, int b, int c){
-            System.out.println(c);
+
         }
         static void add1(int a, float b){
-            System.out.println(b);
+
         }
         static void add1(float a, int b){
-            System.out.println(a);
+
         }
 
 
@@ -38,16 +38,19 @@ public class main {
         int n = sc.nextInt();
         for (int i = 0; i < n; i++)
             arr[i] = i;
+        System.out.println(arr);
     }
     static void print4(float[] arr){
         int n = sc.nextInt();
         for (int i = 0; i < n; i++)
             arr[i] = i;
+        System.out.println(arr);
     }
     static void print4(double[] arr){
             int n = sc.nextInt();
             for (int i = 0; i < n; i++) {
                 arr[i] = i;
+                System.out.println(arr);
         }
     }
 
@@ -61,13 +64,12 @@ public class main {
             array[i] = i;
             return array[a];
     }
-//    public static boolean search(int[] array, int argument, int index){
-//            int n = sc.nextInt();
-//            for (int i = 0; i < n; i++)
-//                array[i] = i;
-//
-//
-//    }
+    public static boolean search(int[] array, int argument, int index){
+            int n = sc.nextInt();
+            for (int i = 0; i < n; i++)
+                array[i] = i;
+            return true;
+    }
 
     //ex6
     static int square6(int a){
@@ -100,25 +102,34 @@ public class main {
         }
 
     //ex8
-    //static int distance9(int a1, int a2, int b1, int b2){
-    // }
+    static int distance9(int a1, int a2){ // b = {0;0}
+        return (int) Math.sqrt(Math.pow(a1, 2) + Math.pow(a2, 2));
+    }
+    static int distance9(int a1, int a2, int b1, int b2){
+        return (int) Math.sqrt(Math.pow(a1 - b1, 2) + Math.pow(a2 - b2, 2));
+     }
 
     //ex10
     static int reminder10(int a) {
-        int i = 10;
+        int i = 1;
         int count = 0;
         while (i < a) {
             i *= 10;
             count++;
         }
+        i /= 10;
         int sum;
-        for (sum = 0; sum < count; sum++) {
-            sum += a % i;
+        for (sum = 0; sum < count;) {
+            sum += a / i;
             i /= 10;
         }
         System.out.println(sum);
         return sum;
     }
+    static int reminder10(int a, int b) {
+        return reminder10(a) % b;
+    }
+
     }
 
 
