@@ -1,5 +1,6 @@
 package HOMEWORK.Day16;
-
+/// input metodic durs
+/// 6 um bolori depqum ashxatuma
 
 import java.time.LocalTime;
 import java.util.Scanner;
@@ -8,7 +9,7 @@ public class main {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        diagonalSequence();
+        palidromBetween();
     }
 
     //ex3
@@ -20,6 +21,8 @@ public class main {
         int n = sc.nextInt();
         if (1 <= n && n <= 15) {
             System.out.println(Math.pow(2, n));
+        }else {
+            System.out.println("Given number out of range");
         }
     }
 
@@ -42,15 +45,16 @@ public class main {
     /*
     Write a java program to determine whether the number is prime or not.
     */
-    public static void primeOrNot() {
+    public static boolean primeOrNot() {
         int n = sc.nextInt();
-        boolean f = false;
+
         for (int i = 2; i < n; i++) {
             if (n % i == 0) {
                 break;
             }
-            f = true;
+            return true;
         }
+        return false;
     }
 
     //ex6
@@ -58,7 +62,7 @@ public class main {
     You are given two four-digit numbers A and B. Print all four-digit numbers on the segment from A
     to B, the record of which is a palindrome.
     */
-    public static void palidromBetween() {
+    public static int palidromBetween() {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int reverse = 0;
@@ -70,9 +74,10 @@ public class main {
                 reverse = reverse * 10 + remainder;
             }
             if (k == reverse) {
-                System.out.println(k);
+                return k;
             }
         }
+        return 0;
     }
 
     //ex7
@@ -91,7 +96,6 @@ public class main {
 
         String output = output1.concat(output2);
         System.out.println(output);
-
     }
 
     //ex8
@@ -111,7 +115,6 @@ public class main {
                 System.out.println();
             }
         }
-
     }
 
     //ex9
@@ -167,7 +170,7 @@ public class main {
 
         }
     }
-    //ex12 X
+    //ex12
     public static void diagonalSequence() {
             int m = sc.nextInt();
             int n = sc.nextInt();
@@ -183,7 +186,7 @@ public class main {
                     }
                 }
             }
-    //ex13 X
+    //ex13
     /*
     Given numbers n and m. Create an array A [n] [m] and fill it with a snake
     */
