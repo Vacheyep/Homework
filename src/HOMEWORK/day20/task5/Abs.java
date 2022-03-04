@@ -4,16 +4,16 @@ public abstract class Abs {
     protected String s;
     protected int i;
 
-    public Abs(String s, int i) {
+    protected Abs(String s, int i) {
         this.s = s;
         this.i = i;
     }
-    public Abs(){}
+    protected Abs(){}
 
-    public void method1(){
+    protected void method1(){
 
     }
-    public void method2(){
+    protected void method2(){
 
     }
 }

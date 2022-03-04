@@ -9,4 +9,9 @@ public class Other extends Abs {
 
     public Other() {
     }
+
+    @Override
+    protected void method1() {
+        super.method1();
+    }
 }
