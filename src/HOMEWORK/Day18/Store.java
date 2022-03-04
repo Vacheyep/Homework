@@ -16,9 +16,7 @@ public class Store {
 
     public boolean getFhone() {
         if (fhone.length() == 8) {
-          if (fhone.contains("-")){
-              return false;
-          }
+            return !fhone.contains("-");
         }
         return true;
     }

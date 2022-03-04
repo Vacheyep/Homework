@@ -4,13 +4,15 @@ public class Triangle {
     int sideA;
     int sideB;
     int sideC;
-    public void triangle(){}
 
-    public void triangle(int sideA, int sideB, int sideC){
+    public Triangle(){}
+
+    public Triangle(int sideA, int sideB, int sideC) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
     }
+
 
     public boolean getSideA() {
         return numInRange(sideA);
@@ -55,6 +57,7 @@ public class Triangle {
     public int triangleCheck(int a, int b){
         return  a * b / 2;
     }
+
     public int triangleCheck(int a, int b, int c){
         return a + b + c;
     }
